@@ -1,0 +1,24 @@
+# Layout settings
+
+animation: "bounceOut"
+
+# Images
+
+logo: 'logoTest.svg'
+background-image: 'Cochabamba,_Cordillera_Tunari.jpg'
+avatar: 'javi-photo.jpg' #200x200 px
+
+# Colors
+
+
+# $accent-light: #7b7fa4
+# $itembg-color: #d0d0d0
+accent: "#5d6396"
+
+document-bg-color: "#fff"
+bg-color: "#d0d0d0"
+headline-color: "#333"
+text-color: "#666"
+link-color: $accent-light
+selection-color: rgb(195, 180, 255)
+

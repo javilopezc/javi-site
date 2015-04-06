@@ -1,0 +1,113 @@
+
+.section-work
+  overflow-x: hidden
+  padding-bottom: 100px
+    
+.work-belt
+  width: 200%
+  position: relative
+  left: 0%
+  +transition(all 600ms)
+  
+.thumb-wrap, .work-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  max-width: 960px
+  margin: 0px auto
+
+  +clearfix
+  
+  .thumb-unit
+    display: block
+    width: 25%
+    float: left
+    position: relative
+    padding-top: 16% 
+    //overflow: hidden
+    cursor: pointer
+    background:      
+      position: center center
+      repeat: no-repeat
+      size: cover
+    +perspective(300)
+      
+    @media screen and (max-width: 760px)
+      width: 50%
+      padding-top: 26%
+        
+    
+    .thumb-overlay
+      height: 100%
+      +position(absolute, 0% 0px null 0px)
+      +align-items(center)
+      +justify-content(space-around)
+      +display(flex)
+      background: fade-out($accent, 0.2)
+      text-align: center      
+      @extend %animationstart_#{$animation}
+      //+transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1))
+      //opacity: 0
+      //+transition(opacity, 300ms)
+      
+      strong
+        display: block
+        padding: 0px 20px
+        color: white
+        font:
+          weight: 300
+          size: 24px
+        text-transform: uppercase
+        line-height: 1.2
+      
+    &:hover
+      z-index: 2
+      
+      .thumb-overlay
+        @extend %#{$animation}
+        //@extend %bounceOut
+        //opacity: 1
+      
+
+.work-container
+  max-width: 600px
+  margin: 0px auto 
+  +position(relative)
+  
+  h4
+    margin: 0px auto 20px
+    color: $accent
+    font-weight: 300
+    font-size: 24px
+    text-transform: uppercase
+    line-height: 1.2
+  
+  img
+    max-width: 100% 
+    margin-bottom: 20px
+    
+  .work-return
+    svg
+      +size(35px)
+      +position(absolute, -3px null null -60px)
+      opacity: 0.5
+      cursor: pointer   
+        
+    
+    path
+      fill: rgba(0,0,0,0.4)
+      
+    &:hover svg
+      opacity: 1
+      
+
+@media (max-width: 760px)
+  .work-container
+    
+    .work-return
+      svg
+        left: 0px
+    
+    h4
+      margin-left: 60px
