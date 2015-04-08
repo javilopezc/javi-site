@@ -21,7 +21,19 @@
       <div class="work-container">
         <div class="work-return">{% include icons/icon-back.html %}</div>
         <h4 class="project-title">Project Title</h4>
-        <div class="project-load"></div>        
+        <div class="project-load"></div>
+        
+        <noscript>
+          {% for project in site.data.settings.projects %}
+            <div class="noscript" id="content-{{ project.folder }}">
+              <h4 class="project-title">{{ project.name }}</h4>
+              <div class="no-script-load">
+                {% include {{ project.file }} %}
+              </div>
+            </div>
+          {% endfor %}
+        </noscript>
+        
       </div>
     </div>
   </div>
