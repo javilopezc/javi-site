@@ -19,7 +19,7 @@
     <div class="client-unit">
       
       <div class="client-face">
-        <img src="img/clients/{{ client.avatar }}" alt="client-face" />
+        <img src="assets/img/clients/{{ client.avatar }}" alt="client-face" />
         <strong class="client-name">{{ client.name }}</strong>
         <em class="client-title">{{ client.title }}</em>
       </div>
@@ -37,7 +37,7 @@
   
   <div class="clients-logos">
     {% for client in site.data.settings.clients %}
-    <img class="client-logo" src="img/clients/{{ client.logo }}" alt="{{ client.logo }}" />
+    <img class="client-logo" src="assets/img/clients/{{ client.logo }}" alt="{{ client.logo }}" />
     {% endfor %}
   
   </div>
